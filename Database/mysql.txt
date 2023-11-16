@@ -1,0 +1,165 @@
+mysql> SELECT * FROM  201904_sales_reciepts LIMIT 10;
++----------------+------------------+------------------+-----------------+----------+-------------+------------+-------+--------------+------------+----------+------------------+------------+---------------+
+| transaction_id | transaction_date | transaction_time | sales_outlet_id | staff_id | customer_id | instore_yn | order | line_item_id | product_id | quantity | line_item_amount | unit_price | promo_item_yn |
++----------------+------------------+------------------+-----------------+----------+-------------+------------+-------+--------------+------------+----------+------------------+------------+---------------+
+|              7 | 2019-04-01       | 12:04:43         |               3 |       12 |         558 | N          |     1 |            1 |         52 |        1 |              2.5 |        2.5 | N             |
+|             11 | 2019-04-01       | 15:54:39         |               3 |       17 |         781 | N          |     1 |            1 |         27 |        2 |                7 |        3.5 | N             |
+|             19 | 2019-04-01       | 14:34:59         |               3 |       17 |         788 | Y          |     1 |            1 |         46 |        2 |                5 |        2.5 | N             |
+|             32 | 2019-04-01       | 16:06:04         |               3 |       12 |         683 | N          |     1 |            1 |         23 |        2 |                5 |        2.5 | N             |
+|             33 | 2019-04-01       | 19:18:37         |               3 |       17 |          99 | Y          |     1 |            1 |         34 |        1 |             2.45 |       2.45 | N             |
+|             39 | 2019-04-01       | 18:54:46         |               3 |       17 |         664 | Y          |     1 |            1 |         32 |        1 |                3 |          3 | N             |
+|             50 | 2019-04-01       | 13:03:49         |               3 |       12 |         316 | N          |     1 |            1 |         49 |        2 |                6 |          3 | N             |
+|             53 | 2019-04-01       | 11:21:14         |               3 |       12 |          38 | N          |     1 |            1 |         60 |        1 |             3.75 |       3.75 | N             |
+|             59 | 2019-04-01       | 19:30:55         |               3 |       12 |         370 | Y          |     1 |            1 |         51 |        2 |                6 |          3 | N             |
+|             62 | 2019-04-01       | 12:01:00         |               3 |       12 |         180 | Y          |     1 |            1 |         49 |        2 |                6 |          3 | N             |
++----------------+------------------+------------------+-----------------+----------+-------------+------------+-------+--------------+------------+----------+------------------+------------+---------------+
+10 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM customer LIMIT 10;
++-------------+------------+---------------------+----------------------+----------------+---------------------+------------+--------+------------+
+| customer_id | home_store | customer_first-name | customer_email       | customer_since | loyalty_card_number | birthdate  | gender | birth_year |
++-------------+------------+---------------------+----------------------+----------------+---------------------+------------+--------+------------+
+|           1 |          3 | Kelly Key           | Venus@adipiscing.edu | 2017-01-04     | 908-424-2890        | 1950-05-29 | M      |       1950 |
+|           2 |          3 | Clark Schroeder     | Nora@fames.gov       | 2017-01-07     | 032-732-6308        | 1950-07-30 | M      |       1950 |
+|           3 |          3 | Elvis Cardenas      | Brianna@tellus.edu   | 2017-01-10     | 459-375-9187        | 1950-09-30 | M      |       1950 |
+|           4 |          3 | Rafael Estes        | Ina@non.gov          | 2017-01-13     | 576-640-9226        | 1950-12-01 | M      |       1950 |
+|           5 |          3 | Colin Lynn          | Dale@Integer.com     | 2017-01-15     | 344-674-6569        | 1951-02-01 | M      |       1951 |
+|           6 |          3 | Igor Beach          | Caleb@morbi.net      | 2017-01-18     | 114-126-1992        | 1951-04-04 | M      |       1951 |
+|           7 |          3 | Scott Holden        | Yen@Integer.edu      | 2017-01-21     | 384-074-3606        | 1951-06-05 | M      |       1951 |
+|           8 |          3 | Keegan Ayala        | Tana@sociis.com      | 2017-01-24     | 257-308-7675        | 1951-08-07 | M      |       1951 |
+|           9 |          3 | Amir Byers          | Madeson@malesuada.us | 2017-01-26     | 931-925-0273        | 1951-10-08 | M      |       1951 |
+|          10 |          3 | Magee Malone        | Anjolie@sapien.gov   | 2017-01-29     | 359-150-6747        | 1951-12-09 | M      |       1951 |
++-------------+------------+---------------------+----------------------+----------------+---------------------+------------+--------+------------+
+10 rows in set (0.00 sec)
+
+
+
+
+mysql> SELECT * FROM dates LIMIT 10;
++------------------+----------+---------+-----------+----------+------------+------------+--------------+---------++
+| transaction_date | Date_ID  | Week_ID | Week_Desc | Month_ID | Month_Name | Quarter_ID | Quarter_Name | Year_ID |
++------------------+----------+---------+-----------+----------+------------+------------+--------------+---------+
+| 4/1/2019         | 20190401 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/2/2019         | 20190402 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/3/2019         | 20190403 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/4/2019         | 20190404 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/5/2019         | 20190405 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/6/2019         | 20190406 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/7/2019         | 20190407 |      14 | Week 14   |        4 | April      |          2 | Q2           |    2019 |
+| 4/8/2019         | 20190408 |      15 | Week 15   |        4 | April      |          2 | Q2           |    2019 |
+| 4/9/2019         | 20190409 |      15 | Week 15   |        4 | April      |          2 | Q2           |    2019 |
+| 4/10/2019        | 20190410 |      15 | Week 15   |        4 | April      |          2 | Q2           |    2019 |
++------------------+----------+---------+-----------+----------+------------+------------+--------------+---------+
+10 rows in set (0.01 sec)
+
+
+
+mysql> SELECT * FROM  generations LIMIT 10;
++------------+--------------+
+| birth_year | generation   |
++------------+--------------+
+|       1946 | Baby Boomers |
+|       1947 | Baby Boomers |
+|       1948 | Baby Boomers |
+|       1949 | Baby Boomers |
+|       1950 | Baby Boomers |
+|       1951 | Baby Boomers |
+|       1952 | Baby Boomers |
+|       1953 | Baby Boomers |
+|       1954 | Baby Boomers |
+|       1955 | Baby Boomers |
++------------+--------------+
+10 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM   pastry_inventory LIMIT 10;
++-----------------+------------------+------------+--------------+---------------+-------+---------+
+| sales_outlet_id | transaction_date | product_id | start_of_day | quantity_sold | waste | % waste |
++-----------------+------------------+------------+--------------+---------------+-------+---------+
+|               3 | 4/1/2019         |         69 |           18 |             8 |    10 | 56%     |
+|               3 | 4/1/2019         |         70 |           18 |            12 |     6 | 33%     |
+|               3 | 4/1/2019         |         71 |           18 |             8 |    10 | 56%     |
+|               3 | 4/1/2019         |         72 |           48 |             9 |    39 | 81%     |
+|               3 | 4/1/2019         |         73 |           18 |             9 |     9 | 50%     |
+|               3 | 4/2/2019         |         69 |           18 |             7 |    11 | 61%     |
+|               3 | 4/2/2019         |         70 |           18 |            10 |     8 | 44%     |
+|               3 | 4/2/2019         |         71 |           18 |            10 |     8 | 44%     |
+|               3 | 4/2/2019         |         72 |           48 |            10 |    38 | 79%     |
+|               3 | 4/2/2019         |         73 |           18 |             9 |     9 | 50%     |
++-----------------+------------------+------------+--------------+---------------+-------+---------+
+10 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM   product LIMIT 10;
++------------+-----------------+------------------+-------------------+------------------------------+-------------------------------------------------------------------------------------------------+-----------------+-------------------------+----------------------+---------------+----------+----------------+
+| product_id | product_group   | product_category | product_type      | product                      | product_description                                                                             | unit_of_measure | current_wholesale_price | current_retail_price | tax_exempt_yn | promo_yn | new_product_yn |
++------------+-----------------+------------------+-------------------+------------------------------+-------------------------------------------------------------------------------------------------+-----------------+-------------------------+----------------------+---------------+----------+----------------+
+|          1 | Whole Bean/Teas | Coffee beans     | Organic Beans     | Brazilian - Organic          | It's like Carnival in a cup. Clean and smooth.                                                  | 12 oz           |
+                14.4 | $18.00               | Y             | N        | N              |
+|          2 | Whole Bean/Teas | Coffee beans     | House blend Beans | Our Old Time Diner Blend     | Out packed blend of beans that is reminiscent of the cup of coffee you used to get at a diner.  | 12 oz           |                    14.4 | $18.00               | Y             | N        | N              |
+|          3 | Whole Bean/Teas | Coffee beans     | Espresso Beans    | Espresso Roast               | Our house blend for a good espresso shot.                                                       | 1 lb            |                    11.8 | $14.75               | Y             | N        | N              |
+|          4 | Whole Bean/Teas | Coffee beans     | Espresso Beans    | Primo Espresso Roast         | Our primium single source of hand roasted beans.                                                | 1 lb            |                   16.36 | $20.45               | Y             | N        | N              |
+|          5 | Whole Bean/Teas | Coffee beans     | Gourmet Beans     | Columbian Medium Roast       | A smooth cup of coffee any time of day.                                                         | 1 lb            |                      12 | $15.00               | Y             | N        | N              |
+|          6 | Whole Bean/Teas | Coffee beans     | Gourmet Beans     | Ethiopia                     | From the home of coffee.                                                                        | 1 lb            |                    16.8 | $21.00               | Y             | N        | N              |
+|          7 | Whole Bean/Teas | Coffee beans     | Premium Beans     | Jamacian Coffee River        | Ya man, it will start your day off right.                                                       | 1 lb            |                    15.8 | $19.75               | Y             | N        | N              |
+|          8 | Whole Bean/Teas | Coffee beans     | Premium Beans     | Civet Cat                    | The most expensive coffee in the world, the cats do all the work.                               | .5 lb           |                      36 | $45.00               | Y             | N        | N              |
+|          9 | Whole Bean/Teas | Coffee beans     | Organic Beans     | Organic Decaf Blend          | Our blend of hand picked organic beans that have been naturally decaffinated.                   | 1 lb            |                      18 | $22.50               | Y             | N        | N              |
+|         10 | Whole Bean/Teas | Coffee beans     | Green beans       | Guatemalan Sustainably Grown | Green beans you can roast yourself.                                                             | 1 lb            |                       8 | $10.00               | Y             | N        | N              |
++------------+-----------------+------------------+-------------------+------------------------------+-------------------------------------------------------------------------------------------------+-----------------+-------------------------+----------------------+---------------+----------+----------------+
+10 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM sales_outlet LIMIT 10;
++-----------------+-------------------+-------------------+--------------------+------------------+----------------------+-----------------+-------------------+-----------------+----------------+---------+-------------------+
+| sales_outlet_id | sales_outlet_type | store_square_feet | store_address      | store_city       | store_state_province | store_telephone | store_postal_code | store_longitude | store_latitude | manager | Neighorhood       |
++-----------------+-------------------+-------------------+--------------------+------------------+----------------------+-----------------+-------------------+-----------------+----------------+---------+-------------------+
+|               2 | warehouse         |              3400 | 164-14 Jamaica Ave | Jamaica          | NY                   | 972-871-0402    |             11432 |      -73.795168 |      40.705226 |    NULL | Jamaica
+  |
+|               3 | retail            |              1300 | 32-20 Broadway     | Long Island City | NY                   | 777-718-3190    |             11106 |      -73.924008 |      40.761196 |       6 | Astoria
+  |
+|               4 | retail            |              1300 | 604 Union Street   | Brooklyn         | NY                   | 619-347-5193    |             11215 |      -73.983984 |      40.677645 |      11 | Gowanus
+  |
+|               5 | retail            |               900 | 100 Church Street  | New York         | NY                   | 343-212-5151    |             10007 |       -74.01013 |       40.71329 |      16 | Lower Manhattan   |
+|               6 | retail            |              1000 | 122 E Broadway     | New York         | NY                   | 613-555-4989    |             10002 |      -73.992687 |      40.713852 |      21 | Lower East Side   |
+|               7 | retail            |              1200 | 224 E 57th Street  | New York         | NY                   | 287-817-2330    |             10021 |          -73.96 |          40.77 |      26 | Upper East Side   |
+|               8 | retail            |              1500 | 687 9th Avenue     | New York         | NY                   | 652-212-7020    |             10036 |      -73.990338 |      40.761887 |      31 | Hell's Kitchen    |
+|               9 | retail            |              1700 | 175 8th Avenue     | New York         | NY                   | 242-212-0080    |             10011 |      -74.000502 |       40.74276 |      36 | Chelsea
+  |
+|              10 | retail            |              1600 | 183 W 10th Street  | New York         | NY                   | 674-646-6434    |             10014 |      -74.002722 |      40.734367 |      41 | Greenwich Village |
++-----------------+-------------------+-------------------+--------------------+------------------+----------------------+-----------------+-------------------+-----------------+----------------+---------+-------------------+
+9 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM  sales_targets LIMIT 10;
++-----------------+------------+------------+---------------+-----------+-------------------+------------+
+| sales_outlet_id | year_month | beans_goal | beverage_goal | food_goal | merchandise _goal | total_goal |
++-----------------+------------+------------+---------------+-----------+-------------------+------------+
+|               3 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
+|               4 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
+|               5 | Apr-19     |       1000 |         18750 |      4750 |               500 |      25000 |
+|               6 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
+|               7 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
+|               8 | Apr-19     |        900 |         16875 |      4275 |               450 |      22500 |
+|               9 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
+|              10 | Apr-19     |        720 |         13500 |      3420 |               360 |      18000 |
++-----------------+------------+------------+---------------+-----------+-------------------+------------+
+8 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM  staff LIMIT 10;
++----------+------------+-----------+-----------------+------------+----------+------------+------------+
+| staff_id | first_name | last_name | position        | start_date | location | Unnamed: 6 | Unnamed: 7 |
++----------+------------+-----------+-----------------+------------+----------+------------+------------+
+|        1 | Sue        | Tindale   | CFO             | 8/3/2001   | HQ       |       NULL |       NULL |
+|        2 | Ian        | Tindale   | CEO             | 8/3/2001   | HQ       |       NULL |       NULL |
+|        3 | Marny      | Hermione  | Roaster         | 10/24/2007 | WH       |       NULL |       NULL |
+|        4 | Chelsea    | Claudia   | Roaster         | 7/3/2003   | WH       |       NULL |       NULL |
+|        5 | Alec       | Isadora   | Roaster         | 4/2/2008   | WH       |       NULL |       NULL |
+|        6 | Xena       | Rahim     | Store Manager   | 7/24/2016  | 3        |       NULL |       NULL |
+|        7 | Kelsey     | Cameron   | Coffee Wrangler | 10/18/2003 | 3        |       NULL |       NULL |
+|        8 | Hamilton   | Emi       | Coffee Wrangler | 2/9/2005   | 3        |       NULL |       NULL |
+|        9 | Caldwell   | Veda      | Coffee Wrangler | 9/9/2013   | 3        |       NULL |       NULL |
+|       10 | Ima        | Winifred  | Coffee Wrangler | 12/10/2016 | 3        |       NULL |       NULL |
++----------+------------+-----------+-----------------+------------+----------+------------+------------+
+10 rows in set (0.00 sec)
